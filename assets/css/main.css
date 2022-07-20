@@ -1,0 +1,54 @@
+li > .active {
+	font-weight: 500;
+}
+
+#main-content {
+	margin-top: 20px;
+}
+
+.profilepicture {
+	max-height: 200px;
+
+	min-width: 150px;
+	min-height: 150px;
+}
+
+.honors-bullet{
+	font-size: 16px;
+	margin-left: 40px;
+}
+
+.force-margin-left {
+	margin-left: 10px !important;
+}
+
+.nombre-it {
+	font-weight: 300;
+}
+
+.tfx-it {
+	font-style: italic;
+}
+
+.custom-h2 {
+	font-size: 2.2em;
+	font-weight: 200;
+
+}
+
+.left-border {
+	border-left: 2px #D9DDDC solid;
+	padding-left: 15px;
+}
+
+.pub-authors {
+	font-weight: 400;
+}
+
+.pub-authors .pub-author {
+	font-weight: 500;
+}
+
+.pub-congress {
+	font-weight: 100;
+}
