@@ -9,7 +9,7 @@ $(document).ready(function(){
 	$('#aboutme').click(function(e) {
 
 		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
+		if(!$(e.target).hasClass('active') || !$('#menulateral').hasClass('active')) {
 			// Update navbar
 			clearActiveLinks();
 			activateLink(e);
@@ -19,6 +19,7 @@ $(document).ready(function(){
 
 			// Show current content
 			activateDiv('#aboutmeContent');
+			activateDiv('#menulateral');
 		}
 
 	});
@@ -34,6 +35,9 @@ $(document).ready(function(){
 
 			// Hide other contents
 			clearActiveDivs();
+
+			// Hide menulateral
+			clearMenuLateral();
 
 			// Show current content
 			activateDiv('#educationContent');
@@ -52,6 +56,9 @@ $(document).ready(function(){
 			// Hide other contents
 			clearActiveDivs();
 
+			// Hide menulateral
+			clearMenuLateral();
+
 			// Show current content
 			activateDiv('#experienceContent');
 		}
@@ -68,6 +75,9 @@ $(document).ready(function(){
 
 			// Hide other contents
 			clearActiveDivs();
+
+			// Hide menulateral
+			clearMenuLateral();
 
 			// Show current content
 			activateDiv('#portfolioContent');
@@ -130,6 +140,11 @@ function clearActiveDivs() {
 		$(this).removeClass('active');
 		$(this).hide();
 	});
+}
+
+function clearMenuLateral() {
+	$('#menulateral').removeClass('active');
+	$('#menulateral').hide();
 }
 
 function activateLink(e) {
