@@ -104,6 +104,11 @@ $(document).ready(function(){
 		}
 	  });
 
+	// Whenever you clic on a portfolio image, you should be redirected to the sepecified URL
+	$('.clickable').click(function(e) {
+		window.open($(e.currentTarget)[0].nextElementSibling.innerHTML);
+	});
+
 });
 
 function downscalePage() {
