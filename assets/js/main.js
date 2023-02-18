@@ -5,11 +5,6 @@ $('#portfolioContent').hide();
 
 $(document).ready(function(){
 
-	// Hides 'infografiaContent' after 300ms so browsers can partially-load the iFrame.
-	setTimeout(function() {
-		$('#infografiaContent').hide();
-	}, 300);
-
 	// Handle 'About Me' content
 	$('#aboutme').click(function(e) {
 
@@ -86,26 +81,6 @@ $(document).ready(function(){
 
 			// Show current content
 			activateDiv('#portfolioContent');
-		}
-	});
-
-	// Handle 'Infografia' content
-	$('#infografia').click(function(e) {
-
-		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
-			// Update navbar
-			clearActiveLinks();
-			activateLink(e);
-
-			// Hide other contents
-			clearActiveDivs();
-
-			// Hide menulateral
-			clearMenuLateral();
-
-			// Show current content
-			activateDiv('#infografiaContent');
 		}
 	});
 
