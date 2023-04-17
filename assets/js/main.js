@@ -1,7 +1,6 @@
 // About Me content is the one by default shown
 $('#educationContent').hide();
 $('#experienceContent').hide();
-$('#portfolioContent').hide();
 
 $(document).ready(function(){
 
@@ -61,26 +60,6 @@ $(document).ready(function(){
 
 			// Show current content
 			activateDiv('#experienceContent');
-		}
-	});
-
-	// Handle 'Projects' content
-	$('#portfolio').click(function(e) {
-
-		// If the div has already the class active, no need to reload the divs...
-		if(!$(e.target).hasClass('active')) {
-			// Update navbar
-			clearActiveLinks();
-			activateLink(e);
-
-			// Hide other contents
-			clearActiveDivs();
-
-			// Hide menulateral
-			clearMenuLateral();
-
-			// Show current content
-			activateDiv('#portfolioContent');
 		}
 	});
 
